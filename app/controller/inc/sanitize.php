@@ -11,6 +11,15 @@ class sanitize extends db_connection
 
         return $string;
     }
+
+    public function is_not_empty($string)
+    {
+        if (empty(trim($string))) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
 
 ?>

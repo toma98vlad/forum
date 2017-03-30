@@ -20,7 +20,7 @@ $author = $author_fetch['username'];
 $time = date('h:i:s');
 $date = date('d/m/Y');
 
-if (!empty($author) && !empty($title) && !empty($time) && !empty($date) && !empty($content)) {
+if ($sanitize->is_not_empty($author) && $sanitize->is_not_empty($title) && $sanitize->is_not_empty($time) && $sanitize->is_not_empty($date) && $sanitize->is_not_empty($content)) {
     $manipulate->insert('threads', 'author, title, time, date, content', '"' . $sanitize->sql_input($author) . '", "' . $sanitize->sql_input($title) . '", "' . $sanitize->sql_input($time) . '", "' . $sanitize->sql_input($date) . '", "' . $sanitize->sql_input($content) . '"');
 }
 
