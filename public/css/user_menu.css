@@ -1,0 +1,42 @@
+.user_menu_wrapper {
+    background-color: #3399ff;
+    padding: 15px;
+}
+
+.user_menu_title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 35px;
+    color: #fff;
+    margin-left: 25%;
+}
+
+.user_menu_panel {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+}
+
+.user_menu_button {
+    background-color: #1f4d7a;
+    color: #fff;
+    border: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 17px;
+    transition: background-color 0.2s;
+    text-align: center;
+}
+
+.user_menu_button > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.user_menu_button:hover {
+    cursor: pointer;
+    background-color: #1a8cff;
+    transition: background-color 0.2s;
+}
