@@ -3,3 +3,13 @@ body {
     background-color: #fff;
     font-family: 'Roboto';
 }
+
+.content_wrapper {
+    background-color: #fff;
+    width: 85%;
+    padding: 25px;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.content_

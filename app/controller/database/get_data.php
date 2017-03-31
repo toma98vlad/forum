@@ -27,6 +27,14 @@ class get_data
 
         return $fetch_assoc;
     }
+
+    public function get_last_announcement($data)
+    {
+        $result = $this->get_data->select($data, 'threads', 'announcement = "1" ORDER BY time DESC');
+        $fetch_assoc = $this->get_data->fetch_assoc($result);
+
+        return $fetch_assoc;
+    }
 }
 
 ?>

@@ -17,7 +17,7 @@ $author_select = $create_thread_manipulate->select('username', 'users', 'BINARY 
 $author_fetch = $create_thread_manipulate->fetch_assoc($author_select);
 $author = $author_fetch['username'];
 
-$time = date('h:i:s');
+$time = time();
 $date = date('d/m/Y');
 
 if ($create_thread_sanitize->is_not_empty($author) && $create_thread_sanitize->is_not_empty($title) && $create_thread_sanitize->is_not_empty($time) && $create_thread_sanitize->is_not_empty($date) && $create_thread_sanitize->is_not_empty($content)) {
