@@ -12,6 +12,13 @@ class sanitize extends db_connection
         return $string;
     }
 
+    public function sql_output($string)
+    {
+        $string = htmlspecialchars($string);
+
+        return $string;
+    }
+
     public function is_not_empty($string)
     {
         if (empty(trim($string))) {

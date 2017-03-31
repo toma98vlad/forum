@@ -4,13 +4,15 @@
             Forum
         </div>
         <div class="user_menu_panel">
-            <?php
+            <div class="user_menu_name">
+                <?php
 
-            echo $_SESSION['user_logged'];
+                echo $_SESSION['user_logged'];
 
-            ?>
+                ?>
+            </div>
             <div class="user_menu_button">
-                <a href="../app/controller/user_actions/logout.php">Logout</a>
+                <a href="../app/controller/user_actions/logout.php">Sign Out</a>
             </div>
         </div>
     </div>

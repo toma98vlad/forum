@@ -16,11 +16,13 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/forum/app/view/homepage.php';
 <div class="content_wrapper">
     <div class="content_container">
         <div class="cassette_wrapper">
-            <div class="cassete_title">
+            <div class="cassette_title">
                 Announcements
             </div>
             <div class="cassette_container">
-                <?php echo $announcement_title; ?>
+                <?php
+                include 'inc/thread_preview.php';
+                ?>
             </div>
         </div>
     </div>
