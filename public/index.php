@@ -12,5 +12,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/forum/public/inc/user_menu.php';
 
 ?>
 
+
+
 </body>
 </html>

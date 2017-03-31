@@ -10,18 +10,18 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/forum/app/controller/inc/sanitize.php
 @$title = $_POST['title'];
 @$content = $_POST['content'];
 
-$manipulate = new db_manipulate;
-$sanitize = new sanitize;
+$create_thread_manipulate = new db_manipulate;
+$create_thread_sanitize = new sanitize;
 
-$author_select = $manipulate->select('username', 'users', 'BINARY username = "' . $_SESSION['user_logged'] . '"');
-$author_fetch = $manipulate->fetch_assoc($author_select);
+$author_select = $create_thread_manipulate->select('username', 'users', 'BINARY username = "' . $_SESSION['user_logged'] . '"');
+$author_fetch = $create_thread_manipulate->fetch_assoc($author_select);
 $author = $author_fetch['username'];
 
 $time = date('h:i:s');
 $date = date('d/m/Y');
 
-if ($sanitize->is_not_empty($author) && $sanitize->is_not_empty($title) && $sanitize->is_not_empty($time) && $sanitize->is_not_empty($date) && $sanitize->is_not_empty($content)) {
-    $manipulate->insert('threads', 'author, title, time, date, content', '"' . $sanitize->sql_input($author) . '", "' . $sanitize->sql_input($title) . '", "' . $sanitize->sql_input($time) . '", "' . $sanitize->sql_input($date) . '", "' . $sanitize->sql_input($content) . '"');
+if ($create_thread_sanitize->is_not_empty($author) && $create_thread_sanitize->is_not_empty($title) && $create_thread_sanitize->is_not_empty($time) && $create_thread_sanitize->is_not_empty($date) && $create_thread_sanitize->is_not_empty($content)) {
+    $create_thread_manipulate->insert('threads', 'author, title, time, date, content', '"' . $create_thread_sanitize->sql_input($author) . '", "' . $create_thread_sanitize->sql_input($title) . '", "' . $create_thread_sanitize->sql_input($time) . '", "' . $create_thread_sanitize->sql_input($date) . '", "' . $create_thread_sanitize->sql_input($content) . '"');
 }
 
 ?>
