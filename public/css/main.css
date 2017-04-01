@@ -1,6 +1,8 @@
 @import url('index.css');
 @import url('login_page.css');
 @import url('user_menu.css');
+@import url('navigation_menu.css');
+@import url('banner.css');
 
 @font-face {
     font-family: 'Roboto';

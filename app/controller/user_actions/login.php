@@ -12,9 +12,13 @@ if (!empty(trim($username_login)) && !empty(trim($password_login))) {
 
     if ($user->logged) {
         $_SESSION['user_logged'] = $user->username;
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/forum/app/model/database/manipulate.php';
+        $login = new db_manipulate;
+        $login->update('users', 'online', '1', 'username = "' . $_SESSION['user_logged'] . '"');
     }
 }
 
 header('Location: ../../../public/index.php');
+die();
 
 ?>

@@ -35,9 +35,9 @@ class db_manipulate extends db_connection
         }
     }
 
-    public function insert($table, $into = '', $values = '')
+    public function insert($table, $columns = '', $values = '')
     {
-        $sql = 'INSERT INTO ' . $table . '(' . $into . ') VALUES (' . $values . ')';
+        $sql = 'INSERT INTO ' . $table . '(' . $columns . ') VALUES (' . $values . ')';
 
         $query = mysqli_query($this->conn, $sql);
 
@@ -45,6 +45,30 @@ class db_manipulate extends db_connection
             return false;
         } else {
             return $query;
+        }
+    }
+
+    public function update($table, $column, $value, $where)
+    {
+        $sql = 'UPDATE ' . $table . ' SET ' . $column . ' = "' . $value . '" WHERE ' . $where;
+
+        $query = mysqli_query($this->conn, $sql);
+
+        if (!$query) {
+            return false;
+        } else {
+            return $query;
+        }
+    }
+
+    public function num_row($result)
+    {
+        $row_number = mysqli_num_rows($result);
+
+        if (!$row_number) {
+            return false;
+        } else {
+            return $row_number;
         }
     }
 
@@ -69,6 +93,16 @@ class db_manipulate extends db_connection
             return $row;
         }
     }
+
+//    public function fetch_all($result)
+//    {
+//        $data = [];
+//        while ($row = mysqli_fetch_all($result)) {
+//            $data[] = $row;
+//        }
+//
+//        return $data;
+//    }
 }
 
 ?>

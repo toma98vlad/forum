@@ -1,32 +1,18 @@
-.user_menu_wrapper {
+.navigation_menu_wrapper {
     background-color: rgba(51, 153, 255, 0.5);
-    padding: 15px;
+    padding: 5px;
+    text-align: center;
 }
 
-.user_menu_title {
+.navigation_menu_container {
+    margin: auto;
+    /*width: 700px;*/
     display: inline-block;
-    vertical-align: middle;
-    font-size: 35px;
-    color: #fff;
-    margin-left: 25%;
 }
 
-.user_menu_panel {
+.navigation_menu_button {
     display: inline-block;
     vertical-align: middle;
-    /*float: right;*/
-}
-
-.user_menu_name {
-    display: inline-block;
-    font-size: 25px;
-    vertical-align: middle;
-    color: #fff;
-}
-
-.user_menu_button {
-    vertical-align: middle;
-    display: inline-block;
     background-color: #1f4d7a;
     color: #fff;
     border: none;
@@ -37,14 +23,16 @@
     font-size: 17px;
     transition: background-color 0.2s;
     text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.user_menu_button > a {
+.navigation_menu_button > a {
     text-decoration: none;
     color: #fff;
 }
 
-.user_menu_button:hover {
+.navigation_menu_button:hover {
     cursor: pointer;
     background-color: #1a8cff;
     transition: background-color 0.2s;

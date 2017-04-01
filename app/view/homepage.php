@@ -16,4 +16,7 @@ $announcement_time = $homepage_sanitize->sql_output($announcement_data['time']);
 $announcement_likes = $homepage_sanitize->sql_output($announcement_data['likes']);
 $announcement_dislikes = $homepage_sanitize->sql_output($announcement_data['dislikes']);
 
+//$online_users_data = $homepage->get_online_users();
+//$online_users = $homepage_sanitize->sql_output($online_users_data);
+
 ?>
