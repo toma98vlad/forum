@@ -12,6 +12,10 @@ body {
     margin-top: 50px;
 }
 
+.cassette_wrapper {
+    margin-bottom: 25px;
+}
+
 .cassette_title {
     background-color: #3399ff;
     color: #fff;

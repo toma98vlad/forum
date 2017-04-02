@@ -83,14 +83,31 @@ class db_manipulate extends db_connection
         }
     }
 
-    public function fetch_assoc($result)
+    public function fetch_assoc($result, $all = '')
     {
-        $row = mysqli_fetch_assoc($result);
+        if ($all == 1) {
+            $rows = [];
+            while ($row = mysqli_fetch_assoc($result)) {
+                foreach ($row as $key => $value) {
+                    $rows[] = [
+                        $key => $value
+                    ];
+                }
+            }
 
-        if (!$row) {
-            return false;
+            if (!$rows) {
+                return false;
+            } else {
+                return $rows;
+            }
         } else {
-            return $row;
+            $row = mysqli_fetch_assoc($result);
+
+            if (!$row) {
+                return false;
+            } else {
+                return $row;
+            }
         }
     }
 

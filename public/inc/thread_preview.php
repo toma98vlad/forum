@@ -1,3 +1,7 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'] . '/forum/app/view/homepage.php';
+?>
+
 <div class="thread_preview_wrapper">
     <div class="thread_preview_container">
         <div class="thread_preview_title">

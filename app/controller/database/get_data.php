@@ -36,13 +36,13 @@ class get_data
         return $fetch_assoc;
     }
 
-//    public function get_online_users()
-//    {
-//        $result = $this->get_data->select('online', 'users', 'online = "1"');
-//        $fetch_all = $this->get_data->fetch_all($result);
-//
-//        return $fetch_all;
-//    }
+    public function get_online_users()
+    {
+        $result = $this->get_data->select('username', 'users', 'online = "1"');
+        $users = $this->get_data->fetch_assoc($result, 1);
+
+        return $users;
+    }
 }
 
 ?>
